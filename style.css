@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f4f8;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 24px 28px 32px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 16px;
+  text-align: center;
+  color: #555;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+form button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+form button:hover {
+  background: #4338ca;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.result,
+.history {
+  margin-top: 20px;
+}
+
+.result h2,
+.history h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.result-row {
+  display: flex;
+  gap: 8px;
+}
+
+.result-row input[type="text"] {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.result-row button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #16a34a;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.result-row button:hover {
+  background: #15803d;
+}
+
+#history-list {
+  list-style: none;
+}
+
+#history-list li {
+  font-size: 0.9rem;
+  padding: 6px 4px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#history-list li span {
+  word-break: break-all;
+}
+
+#history-list li .short {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .result-row {
+    flex-direction: column;
+  }
+
+  .result-row button {
+    width: 100%;
+  }
+}
